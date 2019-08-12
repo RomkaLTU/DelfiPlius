@@ -1,0 +1,211 @@
+html,
+body {
+    font-size: 14px;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.dp-block-heading {
+    @apply dp-text-23px dp-text-center dp-mb-20px;
+
+    @screen lg {
+        @apply dp-text-30px dp-mb-40px;
+    }
+}
+
+.dp-separator {
+    & > div {
+        position: relative;
+
+        &:after {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 0;
+            height: 100%;
+
+            @screen md {
+                border-right: 1px solid #e7e7e7;
+            }
+        }
+
+        &:last-child {
+            &:after {
+                content: '';
+                border-right: none;
+            }
+        }
+    }
+}
+
+/* Custom checkboxes, radios */
+
+.dp-custom-radio {
+    display: inline-flex;
+    align-items: center;
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    &-label {
+        color: #9ea0a6;
+        line-height: 2;
+    }
+
+    input {
+        position: absolute;
+        visibility: hidden;
+
+        & + span {
+            position: relative;
+            display: flex;
+            align-items: center;
+            border: 2px solid #000000;
+            width: 17px;
+            height: 17px;
+            border-radius: 50%;
+            margin-right: 10px;
+
+            &:before {
+                content: '';
+                position: absolute;
+                background-color: transparent;
+                transition: background-color 0.2s;
+                left: 3px;
+                top: 3px;
+                width: 7px;
+                height: 7px;
+                border-radius: 50%;
+                
+            }
+        }
+
+        &:checked {
+            & + span {
+                &:before {
+                    background-color: #000000;
+                }
+            }
+
+            & ~ .dp-custom-radio-label {
+                color: #000000;
+            }
+        }
+    }
+}
+
+.dp-custom-checkbox {
+    display: inline-flex;
+    align-items: center;
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    &-label {
+        &--on {
+            display: none;
+        }
+    }
+
+    input {
+        position: absolute;
+        visibility: hidden;
+
+        & + span {
+            position: relative;
+            display: flex;
+            align-items: center;
+            width: 50px;
+            height: 30px;
+            border-radius: 14px;
+            background-color: #6e7179;
+            margin-right: 10px;
+            transition: background-color 0.2s;
+
+            &:before {
+                content: '';
+                position: absolute;
+                background-color: #fff;
+                left: 1px;
+                top: 1px;
+                width: 27px;
+                height: 27px;
+                border-radius: 50%;
+                
+            }
+        }
+
+        &:checked {
+            & + span {
+                background-color: #ffc720;
+
+                &:before {
+                    left: auto;
+                    right: 1px;
+                }
+            }
+
+            & ~ .dp-custom-checkbox-label--on {
+                display: block;
+            }
+
+            & ~ .dp-custom-checkbox-label--off {
+                display: none;
+            }
+        }
+    }
+}
+
+/* end Custom checkboxes, radios */
+
+/* Slider */
+.glider {
+    &-next,
+    &-prev {
+        top: 43% !important;
+        font-size: 20px !important;
+    }
+}
+/* end Slider */
+
+/* Modal */
+.dl-custom-modal {
+    position: relative;
+    background: rgba(255, 255, 255, 0) !important;
+    padding-top: 0 !important;
+
+    @screen md {
+        padding-top: 60px;
+    }
+
+    .tingle-modal-box {
+        width: 100%;
+        height: 100%;
+        max-width: 670px;
+
+        @screen md {
+            height: auto;
+        }
+    }
+
+    .tingle-modal-box__content {
+        box-shadow: -1px 0px 16px 0px rgba(0,0,0,0.2);
+        padding-left: 5rem;
+        padding-right: 5rem;
+        height: 100%;
+
+        @screen md {
+            height: auto;
+        }
+    }
+}
+/* end Modal */
