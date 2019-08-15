@@ -3,15 +3,30 @@ import '../../../node_modules/glider-js/glider.min.css'
 import tingle from 'tingle.js'
 import '../../../node_modules/tingle.js/dist/tingle.min.css'
 
+const glider_el = document.querySelector('.dp-glider');
+
+
+
 document.addEventListener("DOMContentLoaded",function(){
-    new Glider(document.querySelector('.dp-glider'), {
-        slidesToShow: 4.5,
-        draggable: true,
-        arrows: {
-            prev: '.glider-prev',
-            next: '.glider-next'
-        },
-    });
+
+    if ( glider_el ) {
+        new Glider(document.querySelector('.dp-glider'), {
+            slidesToShow: 2.5,
+            draggable: true,
+            responsive: [
+                {
+                    breakpoint: 500,
+                    settings: {
+                        slidesToShow: 4.5,
+                        arrows: {
+                            prev: '.glider-prev',
+                            next: '.glider-next',
+                        },
+                    },
+                },
+            ],
+        });
+    }
 
     const dpmodal = document.querySelectorAll('.dp-modal');
 
@@ -23,10 +38,47 @@ document.addEventListener("DOMContentLoaded",function(){
         cssClass: ['dl-custom-modal'],
     });
 
+    const modal_confirmation = new tingle.modal({
+        closeMethods: [],
+        footer: false,
+        stickyFooter: false,
+        cssClass: ['dl-custom-modal','dl-custom-modal--confirmation'],
+    });
+
+    let checked_el = false;
+
     dpmodal.forEach( (el) => {
-        el.addEventListener('click', function(){
-            modal.setContent(document.querySelector('.dp-tingle-modal').innerHTML);
-            modal.open();
+        el.addEventListener('change', function(el){
+            if ( !el.target.checked ) {
+                checked_el = el.target;
+
+                modal_confirmation.setContent(document.querySelector('.dp-tingle-modal-confirm').innerHTML);
+                modal_confirmation.open();
+            }
         });
+    });
+
+    document.addEventListener('click', function(el){
+        if ( el.target.id === 'dp_cancelsub' ) {
+            modal.setContent(document.querySelector('.dp-tingle-modal-off').innerHTML);
+            modal.open();
+        }
+
+        if ( el.target.id === 'dp_cancelaction' ) {
+            checked_el.checked = true;
+            modal_confirmation.close();
+        }
+
+        if ( el.target.id === 'dp_submit_poll' ) {
+            modal_confirmation.close();
+            modal.close();
+        }
+
+        if ( el.target.classList.contains('dp_close_modal') ) {
+            modal.close();
+
+            checked_el.checked = true;
+            modal_confirmation.close();
+        }
     });
 });

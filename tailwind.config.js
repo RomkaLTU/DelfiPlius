@@ -4,6 +4,7 @@ module.exports = {
       spacing: {
         // base 14px
         '20px': '1.428rem',
+        '25px': '1.785rem',
         '30px': '2.142rem',
         '40px': '2.857rem',
         '47px': '3.357rem',
@@ -14,6 +15,8 @@ module.exports = {
         '3': '3 2 0%',
       },
       width: {
+        '35p': '35%',
+        '65p': '65%',
         '68px': '4.857rem',
         '80px': '5.714rem',
         '120px': '8.571rem',
@@ -21,6 +24,9 @@ module.exports = {
         '160px': '11.428rem',
         '170px': '12.142rem',
         '185px': '13.214rem',
+      },
+      height: {
+        '103px': '7.357rem'
       },
     },
     fontSize: {
@@ -45,6 +51,7 @@ module.exports = {
         5: '#6e7179',
         6: '#f2f2f2',
         7: '#a7a7a7',
+        8: '#f3f3f3',
       },
       green: {
         1: '#33c700',

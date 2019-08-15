@@ -13,7 +13,11 @@ body {
 }
 
 .dp-block-heading {
-    @apply dp-text-23px dp-text-center dp-mb-20px;
+    @apply dp-text-18px dp-text-center dp-mb-20px font-normal dp-px-4;
+
+    @screen md {
+        @apply dp-text-23px
+    }
 
     @screen lg {
         @apply dp-text-30px dp-mb-40px;
@@ -171,8 +175,26 @@ body {
 .glider {
     &-next,
     &-prev {
+        display: none;
+        background-color: #fff !important;
+        width: 40px !important;
+        height: 52px !important;
+        border: 1px solid #e7e7e7 !important;
         top: 43% !important;
         font-size: 20px !important;
+        
+        @screen lg {
+            display: block;
+        }
+    }
+
+    &-prev {
+        border-left: none !important;
+    }
+
+    &-next {
+        border-right: none !important;
+        right: -21px !important;
     }
 }
 /* end Slider */
@@ -197,6 +219,10 @@ body {
         }
     }
 
+    &--confirmation .tingle-modal-box {
+        max-width: 601px;
+    }
+
     .tingle-modal-box__content {
         box-shadow: -1px 0px 16px 0px rgba(0,0,0,0.2);
         padding-left: 5rem;
@@ -206,6 +232,12 @@ body {
         @screen md {
             height: auto;
         }
+    }
+
+    &--confirmation .tingle-modal-box__content {
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+        padding-bottom: 2rem;
     }
 }
 /* end Modal */
