@@ -7,9 +7,20 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
-.container {
+.dp-container {
     max-width: 1200px;
-    margin: 0 auto;
+    @apply mx-auto;
+
+    &-inner {
+        width: 100%;
+        max-width: 762px;
+        padding-top: 3px;
+        @apply dp-pb-30px dp-mx-auto;
+
+        @screen lg {
+            width: 64%;
+        }
+    }
 }
 
 .dp-block-heading {

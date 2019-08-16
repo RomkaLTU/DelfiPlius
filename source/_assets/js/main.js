@@ -81,4 +81,14 @@ document.addEventListener("DOMContentLoaded",function(){
             modal_confirmation.close();
         }
     });
+
+    const dp_file_input = document.querySelectorAll('.dp_file_input');
+
+    dp_file_input.forEach(function(el){
+        let fakeInput = el.nextSibling.nextSibling;
+
+        el.addEventListener('change', function(event) {
+            fakeInput.innerHTML = event.target.files[0].name;  
+        });
+    });
 });

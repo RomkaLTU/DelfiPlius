@@ -9,7 +9,7 @@
         <link rel="stylesheet" href="{{ mix('css/dp-main.css', 'assets/build') }}">
     </head>
     <body>
-        <div class="container">
+        <div class="dp-container">
             <div class="lg:dp-flex lg:dp-flex-wrap">
                 <div class="dp-hidden lg:dp-block dp-flex-1 dp-max-w-294px dp-mr-40px">
                     <div class="dp-fixed dp-w-full dp-max-w-294px dp-bg-gray-1 dp-h-screen"></div>

@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="/assets/build/css/dp-main.css?id=d795933467963ab8098f">
+        <link rel="stylesheet" href="{{ mix('css/dp-main.css', 'assets/build') }}">
         <style>
         body,
         html {
@@ -15,11 +15,7 @@
     </head>
     <body>
         <div class="dp-container">
-                <div class="dp-w-full dp-flex dp-justify-around dp-mt-8">
-        <a href="/naryste-neaktyvi">Narystė neaktyvi</a>
-        <a href="/naryste-aktyvi">Narystė aktyvi</a>
-        <a href="/lesu-ismokejimas">Lėšų išmokėjimo forma</a>
-    </div>
+            @yield('body')
         </div>
     </body>
 </html>
