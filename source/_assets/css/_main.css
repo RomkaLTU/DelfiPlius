@@ -252,3 +252,31 @@ body {
     }
 }
 /* end Modal */
+
+/* Tabs */
+.dp-tab-content {
+    display: none;
+}
+
+label:checked {
+    background-color: red;
+}
+
+.dp-tab-trigger:checked + .dp-tab-content {
+    display: block;
+}
+/* end Tabs */
+
+/* Custom checkboxes */
+.dp-custom-checkbox {
+    & + .dp-custom-checkbox--fake i {
+        visibility: hidden;
+    }
+}
+
+.dp-custom-checkbox:checked {
+    & + .dp-custom-checkbox--fake i {
+        visibility: visible;
+    }
+}
+/* end Custom checkboxes */

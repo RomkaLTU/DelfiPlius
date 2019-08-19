@@ -6,6 +6,7 @@ module.exports = {
         '19px': '1.357rem',
         '20px': '1.428rem',
         '25px': '1.785rem',
+        '26px': '1.857rem',
         '27px': '1.928rem',
         '30px': '2.142rem',
         '35px': '2.5rem',
@@ -13,6 +14,7 @@ module.exports = {
         '47px': '3.357rem',
         '53px': '3.785rem',
         '69px': '4.928rem',
+        '98px': '7rem',
         '350px': '25rem',
       },
       flex: {

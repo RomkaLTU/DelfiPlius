@@ -38,6 +38,9 @@
                 @yield('body')
             </div>
         </div>
+        <div class="dp-container dp-mt-4">
+            @include('_partials.tu-pasirinkai', [])
+        </div>
         <script src="{{ mix('js/main.js', 'assets/build') }}"></script>
     </body>
 </html>
