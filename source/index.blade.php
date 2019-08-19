@@ -7,5 +7,6 @@
         <a href="/lesu-ismokejimas">Lėšų išmokėjimo forma</a>
         <a href="/apmokejimo-forma">Apmokėjimo forma</a>
         <a href="/apmokejimo-budai">Apmokėjimo būdai</a>
+        <a href="/mokamas-turinys">Mokamas turinys (cloak)</a>
     </div>
 @endsection

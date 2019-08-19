@@ -302,3 +302,32 @@ label:checked {
     }
 }
 /* end Custom radio */
+
+.dp-try-premium-heading {
+    &:before,
+    &:after {
+        content: none;
+    }
+
+    @screen lg {
+        &:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 1rem;
+            width: 28%;
+            height: 1px;
+            background-color: #efefef;
+        }
+
+        &:after {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 1rem;
+            width: 28%;
+            height: 1px;
+            background-color: #efefef;
+        }
+    }
+}
