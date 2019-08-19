@@ -280,3 +280,25 @@ label:checked {
     }
 }
 /* end Custom checkboxes */
+
+/* Custom radio */
+.dp-custom-radio-2 {
+    input:checked + span {
+        background-color: #f5f6f7;
+
+        .dp-fake-radio {
+            border-width: 7px;
+        }
+    }
+
+    &--disabled {
+        input:checked + span {
+            background-color: #fff;
+
+            .dp-fake-radio {
+                border-color: #e7e7e7;
+            }
+        }
+    }
+}
+/* end Custom radio */

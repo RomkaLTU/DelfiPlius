@@ -6,5 +6,6 @@
         <a href="/naryste-aktyvi">Narystė aktyvi</a>
         <a href="/lesu-ismokejimas">Lėšų išmokėjimo forma</a>
         <a href="/apmokejimo-forma">Apmokėjimo forma</a>
+        <a href="/apmokejimo-budai">Apmokėjimo būdai</a>
     </div>
 @endsection

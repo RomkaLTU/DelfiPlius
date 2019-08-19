@@ -1,9 +1,9 @@
 @extends('_layouts.fullwidth')
 
 @section('body')
-    <div class="dp-flex dp-flex-col lg:dp-flex-row dp-px-4">
-        <label class="dp-mb-1 lg:dp-mb-0 dp-flex-1 dp-cursor-pointer dp-border dp-border-gray-9 lg:dp-rounded-l-5px dp-bg-white dp-py-3 dp-text-center dp-text-18px" for="dp_payment_cc">Banko kortele</label>
-        <label class="dp-flex-1 dp-cursor-pointer dp-border dp-border-gray-9 lg:dp-rounded-r-5px dp-bg-white dp-py-3 dp-text-center dp-text-18px" for="dp_payment_sms">SMS žinute</label>
+    <div class="dp-flex dp-flex-col lg:dp-flex-row dp-px-4 lg:dp-px-0">
+        <label class="dp_payment_type dp-bg-gray-3 dp-mb-1 lg:dp-mb-0 dp-flex-1 dp-cursor-pointer dp-border dp-border-gray-9 lg:dp-rounded-l-5px dp-bg-white dp-py-3 dp-text-center dp-text-18px" for="dp_payment_cc">Banko kortele</label>
+        <label class="dp_payment_type dp-flex-1 dp-cursor-pointer dp-border dp-border-gray-9 lg:dp-rounded-r-5px dp-bg-white dp-py-3 dp-text-center dp-text-18px" for="dp_payment_sms">SMS žinute</label>
     </div>
     <div class="dp-mt-8">
         <input name="payment_type" type="radio" id="dp_payment_cc" class="dp-tab-trigger dp-absolute dp-invisible" checked>

@@ -19,10 +19,12 @@ module.exports = {
       },
       flex: {
         '3': '3 2 0%',
+        '4': '4 2 0%',
       },
       width: {
         '35p': '35%',
         '65p': '65%',
+        '22px': '1.571rem',
         '60px': '4.285rem',
         '68px': '4.857rem',
         '80px': '5.714rem',
@@ -34,6 +36,7 @@ module.exports = {
         '185px': '13.214rem',
       },
       height: {
+        '22px': '1.571rem',
         '50px': '3.571rem',
         '103px': '7.357rem',
       },
@@ -91,6 +94,9 @@ module.exports = {
     },
     minWidth: {
       '150px': '12.142rem',
+    },
+    minHeight: {
+      '60px': '4.285rem',
     },
     maxWidth: {
       '120px': '8.571rem',

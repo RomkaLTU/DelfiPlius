@@ -80,6 +80,14 @@ document.addEventListener("DOMContentLoaded",function(){
             checked_el.checked = true;
             modal_confirmation.close();
         }
+
+        if ( el.target.classList.contains('dp_payment_type') ) {
+            const dp_payment_type = document.querySelectorAll('.dp_payment_type');
+
+            dp_payment_type.forEach( el => el.classList.remove('dp-bg-gray-3') );
+
+            el.target.classList.add('dp-bg-gray-3');
+        }
     });
 
     const dp_file_input = document.querySelectorAll('.dp_file_input');
